@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class ChatTile extends StatelessWidget {
   final String avator;
-  final String title;
+  final String? title;
   final String message;
   final String? time;
   final String count;
   const ChatTile(
       {super.key,
       required this.avator,
-      required this.title,
+      this.title,
       required this.message,
       this.time,
       required this.count});
@@ -28,7 +28,7 @@ class ChatTile extends StatelessWidget {
           ),
         ),
         title: Text(
-          title,
+          title ?? "Ananomous",
           style: const TextStyle(fontWeight: FontWeight.w500),
         ),
         subtitle: Text(
