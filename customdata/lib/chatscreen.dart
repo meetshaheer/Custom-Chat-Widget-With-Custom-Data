@@ -9,7 +9,15 @@ class chatscreen extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
           child: Column(
-        children: [ChatTile(), ChatTile()],
+        children: [
+          ChatTile(
+            avator: "KH",
+            title: "Ameer KHI",
+            message: "Where are you buddy? Come here",
+            count: "9",
+            time: "4:56 am",
+          )
+        ],
       )),
     );
   }

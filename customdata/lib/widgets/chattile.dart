@@ -40,7 +40,7 @@ class ChatTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Text(
-                time!,
+                time ?? "",
                 style: TextStyle(
                     color: Colors.green[600],
                     fontWeight: FontWeight.w300,
@@ -61,11 +61,5 @@ class ChatTile extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(StringProperty('title', title));
   }
 }
