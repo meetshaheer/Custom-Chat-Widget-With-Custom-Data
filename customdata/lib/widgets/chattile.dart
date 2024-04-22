@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ChatTile extends StatelessWidget {
-  final String profile;
+  final String avator;
   final String title;
   final String message;
   final String? time;
   final String count;
   const ChatTile(
       {super.key,
-      required this.profile,
+      required this.avator,
       required this.title,
       required this.message,
       this.time,
@@ -24,7 +24,7 @@ class ChatTile extends StatelessWidget {
           child: CircleAvatar(
             radius: 25,
             backgroundColor: Colors.teal[50],
-            child: Text(profile),
+            child: Text(avator),
           ),
         ),
         title: Text(
