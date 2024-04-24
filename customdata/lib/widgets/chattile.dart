@@ -6,13 +6,14 @@ class ChatTile extends StatelessWidget {
   final String message;
   final String? time;
   final String count;
-  const ChatTile(
-      {super.key,
-      required this.avator,
-      this.title,
-      required this.message,
-      this.time,
-      required this.count});
+  const ChatTile({
+    super.key,
+    required this.avator,
+    this.title,
+    required this.message,
+    this.time,
+    required this.count,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +24,7 @@ class ChatTile extends StatelessWidget {
           padding: const EdgeInsets.only(left: 0),
           child: CircleAvatar(
             radius: 25,
-            backgroundColor: Colors.teal[50],
-            child: Text(avator),
+            backgroundImage: NetworkImage(avator),
           ),
         ),
         title: Text(
